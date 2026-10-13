@@ -19,7 +19,7 @@ export const HotelLogo: React.FC<HotelLogoProps> = ({
     xl: 'w-20 h-20',
   };
 
-  const imageSrc = hotelConfig.logoUrl || '/src/assets/images/hotel_official_logo_1791888583654.jpg';
+  const imageSrc = hotelConfig.logoUrl || '/images/logo.jpg';
 
   return (
     <div className={`inline-flex items-center gap-3 ${className}`}>

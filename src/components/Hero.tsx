@@ -17,7 +17,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onEnquireClick }) =>
       {/* Background Image with Measured Contrast Scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/real_hero_grand_heritage_entrance_1791887624015.jpg"
+          src="/images/hero.jpg"
           alt="Hotel The Grand Heritage Junagadh Grand Entrance"
           className="w-full h-full object-cover object-center scale-105 motion-safe:animate-in motion-safe:fade-in duration-1000"
           referrerPolicy="no-referrer"

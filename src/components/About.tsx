@@ -27,7 +27,7 @@ export const About: React.FC<AboutProps> = ({ onViewRoomsClick }) => {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-sm overflow-hidden shadow-xl border-4 border-white bg-stone-100 group">
               <img
-                src="/src/assets/images/real_reception_grand_heritage_1791887504546.jpg"
+                src="/images/reception.jpg"
                 alt="Reception & Front Desk at Hotel The Grand Heritage Junagadh"
                 className="w-full h-[380px] sm:h-[460px] object-cover object-center group-hover:scale-102 transition-transform duration-700"
                 referrerPolicy="no-referrer"
