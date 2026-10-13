@@ -14,7 +14,7 @@ export interface RoomCategory {
 export interface GalleryItem {
   id: string;
   title: string;
-  category: 'Lobby' | 'Rooms' | 'Bathrooms' | 'Reception';
+  category: 'Lobby' | 'Rooms' | 'Bathrooms' | 'Reception' | 'Entrance';
   imageUrl: string;
   description: string;
   isRepresentative: boolean;
@@ -23,6 +23,7 @@ export interface GalleryItem {
 export interface HotelConfig {
   name: string;
   brandTagline: string;
+  logoUrl?: string;
   phone: string;
   formattedPhone: string;
   address: {
@@ -60,7 +61,8 @@ export interface HotelConfig {
 
 export const hotelConfig: HotelConfig = {
   name: "Hotel The Grand Heritage Junagadh",
-  brandTagline: "Your Comfortable Stay in Junagadh",
+  brandTagline: "A legacy of hospitality",
+  logoUrl: "/src/assets/images/hotel_official_logo_1791888583654.jpg",
   phone: "919737771871",
   formattedPhone: "+91 97377 71871",
   address: {
@@ -75,7 +77,7 @@ export const hotelConfig: HotelConfig = {
   checkIn: "11:00 AM",
   checkOut: "10:00 AM",
   rating: 4.9,
-  reviewCount: 144,
+  reviewCount: 0,
   ratingSource: "Supplied Google Maps information",
   gstNumber: "24AASFH7375P1ZE",
   instagram: "https://www.instagram.com/hotel_the_grand_heritage/",
@@ -94,10 +96,16 @@ export const hotelConfig: HotelConfig = {
       verified: true, // Displayed on official entrance signage
     },
     {
-      title: "Front Desk Assistance",
-      description: "Dedicated front desk reception counter to assist guests during check-in, check-out, and local travel inquiries.",
+      title: "Front Desk & Reception",
+      description: "Dedicated front desk reception counter with illuminated hotel branding to assist guests with check-in and travel inquiries.",
       icon: "clock",
-      verified: true, // Verified from front desk reception
+      verified: true, // Verified from front desk reception photo
+    },
+    {
+      title: "Bathtub & Marble Bathrooms",
+      description: "Private en-suite bathrooms finished with marble wall tiles, soaking bathtub, and modern fixtures.",
+      icon: "bath",
+      verified: true, // Verified from bathroom photo
     },
     {
       title: "Prime Zanzarda Location",
@@ -105,91 +113,101 @@ export const hotelConfig: HotelConfig = {
       icon: "map-pin",
       verified: true,
     },
-    {
-      title: "Attached Private Bathrooms",
-      description: "Modern, hygienic private bathrooms fitted with quality fixtures and water heaters.",
-      icon: "bath",
-      verified: true,
-    },
   ],
   rooms: [
     {
-      id: "executive-heritage",
-      name: "Heritage Executive Room",
-      badge: "Sample Category (Tariffs on Request)",
-      description: "Comfortable air-conditioned king bedroom featuring warm wood paneling, designer lighting, and a serene ambiance suited for solo travelers and couples.",
-      capacity: "Up to 2 Adults",
-      bedConfiguration: "1 King-Size Bed",
-      image: "/src/assets/images/room_executive_suite_1791886018649.jpg",
-      facilities: ["Air Conditioning", "En-suite Bathroom", "Bedside Controls", "LED Television"],
-      isDemoSample: true,
-      indicativePriceNote: "Direct WhatsApp quote available based on travel dates",
+      id: "heritage-deluxe-bird-sconces",
+      name: "Heritage Executive AC Room",
+      badge: "Real Property Category",
+      description: "Spacious air-conditioned bedroom featuring custom wood-textured headboard wall, iconic golden bird sconce lamps, king-size bed with emerald green quilted cushions, and bedside telephone controls.",
+      capacity: "Up to 2-3 Guests",
+      bedConfiguration: "1 King-Size Bed (+ extra single bed available)",
+      image: "/src/assets/images/real_bedroom_bird_sconces_1791887504703.jpg",
+      facilities: ["Air Conditioning", "Bird Sconce Designer Lamps", "En-suite Marble Bath", "Intercom Phone", "Bedside Switches"],
+      isDemoSample: false,
+      indicativePriceNote: "Direct quote available on WhatsApp based on your travel dates",
     },
     {
-      id: "deluxe-family-suite",
-      name: "Grand Family Suite",
-      badge: "Sample Category (Tariffs on Request)",
-      description: "Spacious multi-guest layout equipped with comfortable sleeping arrangements, ideal for families visiting Girnar, religious sites, or wildlife excursions in Junagadh.",
-      capacity: "Up to 3-4 Guests",
-      bedConfiguration: "1 Double Bed + 1 Single Bed",
-      image: "/src/assets/images/room_deluxe_family_1791886020132.jpg",
-      facilities: ["Air Conditioning", "Extra Bedding Space", "En-suite Bathroom", "Wardrobe Storage"],
-      isDemoSample: true,
-      indicativePriceNote: "Direct WhatsApp quote available based on travel dates",
+      id: "deluxe-swan-lion-suite",
+      name: "Deluxe Suite with Gir Lion Art",
+      badge: "Real Property Category",
+      description: "Elegantly appointed room honoring Junagadh's heritage with framed Asiatic Lion wall art, delicate floral wallpaper, swan folded towel art, and contemporary LED accent lighting.",
+      capacity: "Up to 2 Adults",
+      bedConfiguration: "1 Plush King / Double Bed",
+      image: "/src/assets/images/real_bedroom_swan_lion_1791887505668.jpg",
+      facilities: ["Air Conditioning", "Swan Linen Presentation", "Asiatic Lion Artwork", "Toiletries Amenity Kit", "En-suite Bathroom"],
+      isDemoSample: false,
+      indicativePriceNote: "Direct quote available on WhatsApp based on your travel dates",
     },
     {
-      id: "deluxe-comfort-room",
-      name: "Deluxe Comfort AC Room",
-      badge: "Sample Category (Tariffs on Request)",
-      description: "Well-appointed air-conditioned room tailored for a peaceful night's rest after exploring the historic sights, stepwells, and forts of Junagadh.",
+      id: "comfort-tv-console-room",
+      name: "Comfort AC Room with Entertainment Console",
+      badge: "Real Property Category",
+      description: "Modern room equipped with a floating wooden media console, flat-screen LED TV, spacious wardrobe storage, and tiled flooring, perfect for pilgrimage or business trips.",
       capacity: "Up to 2 Adults",
-      bedConfiguration: "1 Comfortable Double Bed",
-      image: "/src/assets/images/hero_hotel_junagadh_1791886018636.jpg",
-      facilities: ["Air Conditioning", "Private Bath", "Luggage Counter", "Intercom Phone"],
-      isDemoSample: true,
-      indicativePriceNote: "Direct WhatsApp quote available based on travel dates",
+      bedConfiguration: "1 Comfortable Bed",
+      image: "/src/assets/images/real_room_tv_wardrobe_1791887562337.jpg",
+      facilities: ["Air Conditioning", "Wall-mounted LED TV", "Wooden Wardrobe Closet", "Floating Desk Console", "Private Bath"],
+      isDemoSample: false,
+      indicativePriceNote: "Direct quote available on WhatsApp based on your travel dates",
     },
   ],
   gallery: [
     {
       id: "gal-1",
-      title: "Welcoming Reception & Foyer",
+      title: "Front Desk & Glowing Brand Signage",
       category: "Reception",
-      imageUrl: "/src/assets/images/hotel_reception_hall_1791886020058.jpg",
-      description: "Warm reception desk with crystal lighting, wood detailing, and hospitable staff ready to welcome you to Junagadh.",
-      isRepresentative: true,
+      imageUrl: "/src/assets/images/real_reception_grand_heritage_1791887504546.jpg",
+      description: "Our authentic reception desk at Hotel The Grand Heritage Junagadh, with marble counter, festive marigolds, and chandelier.",
+      isRepresentative: false,
     },
     {
       id: "gal-2",
-      title: "Heritage Executive Bedroom",
-      category: "Rooms",
-      imageUrl: "/src/assets/images/room_executive_suite_1791886018649.jpg",
-      description: "Comfortable king-size bed with crisp white linens and emerald accents for a restful night.",
-      isRepresentative: true,
+      title: "Hotel Entrance & Welcome Doors",
+      category: "Entrance",
+      imageUrl: "/src/assets/images/real_entrance_grand_heritage_1791887504524.jpg",
+      description: "Main entrance of Hotel The Grand Heritage featuring our official signboard, AC Luxurious Rooms branding, and welcome glass doors.",
+      isRepresentative: false,
     },
     {
       id: "gal-3",
-      title: "Grand Family Accommodations",
+      title: "Executive Bed with Golden Bird Lamps",
       category: "Rooms",
-      imageUrl: "/src/assets/images/room_deluxe_family_1791886020132.jpg",
-      description: "Spacious layout with artful linen arrangements, perfect for family vacations and pilgrimage tours.",
-      isRepresentative: true,
+      imageUrl: "/src/assets/images/real_bedroom_bird_sconces_1791887504703.jpg",
+      description: "Comfortable guest bedroom with emerald quilted cushions, rustic wood texture wall, and golden bird wall sconce lamps.",
+      isRepresentative: false,
     },
     {
       id: "gal-4",
-      title: "En-suite Marble Bathroom",
-      category: "Bathrooms",
-      imageUrl: "/src/assets/images/suite_marble_bath_1791886020730.jpg",
-      description: "Clean, stone-tiled bathroom with deep soaking tub and modern sanitary fixtures.",
-      isRepresentative: true,
+      title: "Deluxe Bedroom & Gir Lion Decor",
+      category: "Rooms",
+      imageUrl: "/src/assets/images/real_bedroom_swan_lion_1791887505668.jpg",
+      description: "Beautifully made bed with swan folded towels, floral wallpaper, and Gir National Park Asiatic Lion pride wall art.",
+      isRepresentative: false,
     },
     {
       id: "gal-5",
-      title: "Grand Lounge & Architectural Heritage",
+      title: "En-suite Marble Bathroom & Soaking Tub",
+      category: "Bathrooms",
+      imageUrl: "/src/assets/images/real_bathroom_marble_tub_1791887506183.jpg",
+      description: "Grey swirl marble tiled bathroom fitted with built-in soaking bathtub and mountain landscape roller blind.",
+      isRepresentative: false,
+    },
+    {
+      id: "gal-6",
+      title: "Entertainment Console & Wardrobe",
+      category: "Rooms",
+      imageUrl: "/src/assets/images/real_room_tv_wardrobe_1791887562337.jpg",
+      description: "Modern floating wooden TV entertainment unit and wardrobe storage inside guest room.",
+      isRepresentative: false,
+    },
+    {
+      id: "gal-7",
+      title: "Hotel Facade & Welcoming Foyer",
       category: "Lobby",
-      imageUrl: "/src/assets/images/hero_hotel_junagadh_1791886018636.jpg",
-      description: "Rich Indian architectural accents and warm ambient hospitality honoring the regal heritage of Saurashtra.",
-      isRepresentative: true,
+      imageUrl: "/src/assets/images/real_hero_grand_heritage_entrance_1791887624015.jpg",
+      description: "Grand illumination of Hotel The Grand Heritage entrance with majestic Girnar mountain view.",
+      isRepresentative: false,
     },
   ],
 };

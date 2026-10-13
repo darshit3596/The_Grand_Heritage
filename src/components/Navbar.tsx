@@ -40,22 +40,27 @@ export const Navbar: React.FC<NavbarProps> = ({ onCheckAvailabilityClick }) => {
           : 'bg-white/90 backdrop-blur-sm border-b border-stone-100 py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-8">
-          {/* Zone 1: Brand Wordmark */}
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between gap-2 sm:gap-4 md:gap-8">
+          {/* Zone 1: Brand Wordmark with Official Crest Logo */}
           <a
             href="#home"
-            className="flex items-center gap-3 whitespace-nowrap shrink-0 group focus:outline-none"
+            className="flex items-center gap-2 sm:gap-3 min-w-0 group focus:outline-none"
           >
-            <div className="w-9 h-9 rounded-sm bg-[#173C32] text-[#F8F5EF] flex items-center justify-center font-serif text-lg font-bold border border-[#B89A62]/40 shadow-sm transition-transform group-hover:scale-105">
-              GH
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-sm bg-black border border-[#B89A62]/40 shadow-sm overflow-hidden flex items-center justify-center p-0.5 shrink-0 transition-transform group-hover:scale-105">
+              <img
+                src={hotelConfig.logoUrl}
+                alt="Hotel The Grand Heritage Junagadh Official Logo"
+                className="w-full h-full object-contain"
+                referrerPolicy="no-referrer"
+              />
             </div>
-            <div className="flex flex-col">
-              <span className="font-serif text-lg sm:text-xl font-bold tracking-wider text-[#173C32] uppercase">
+            <div className="flex flex-col min-w-0">
+              <span className="font-serif text-sm sm:text-base md:text-xl font-bold tracking-wider text-[#173C32] uppercase leading-tight truncate">
                 The Grand Heritage
               </span>
-              <span className="text-[10px] tracking-widest text-[#B89A62] uppercase font-semibold">
-                Junagadh · Gujarat
+              <span className="text-[9px] sm:text-[10px] tracking-widest text-[#B89A62] uppercase font-semibold truncate">
+                A Legacy of Hospitality · Junagadh
               </span>
             </div>
           </a>
@@ -73,8 +78,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onCheckAvailabilityClick }) => {
             ))}
           </nav>
 
-          {/* Zone 3: 1 Primary Action */}
-          <div className="hidden sm:flex items-center gap-3 shrink-0">
+          {/* Zone 3: 1 Primary Action (Desktop) */}
+          <div className="hidden md:flex items-center gap-3 shrink-0">
             <a
               href={`tel:+${hotelConfig.phone}`}
               className="p-2 text-[#173C32] hover:text-[#B89A62] rounded-full hover:bg-stone-100 transition-colors"
@@ -90,17 +95,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onCheckAvailabilityClick }) => {
             </button>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
-          <div className="flex md:hidden items-center gap-2">
-            <button
-              onClick={onCheckAvailabilityClick}
-              className="px-3 py-1.5 text-[11px] uppercase tracking-wider font-semibold text-white bg-[#173C32] rounded border border-[#B89A62]/30"
-            >
-              Enquire
-            </button>
+          {/* Mobile Menu Toggle Button (Clean, no cut-off) */}
+          <div className="flex md:hidden items-center shrink-0">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-stone-700 hover:text-[#173C32] focus:outline-none"
+              className="p-2 text-stone-700 hover:text-[#173C32] rounded hover:bg-stone-100 focus:outline-none"
               aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

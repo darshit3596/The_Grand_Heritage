@@ -17,7 +17,7 @@ export const BookingInquiry: React.FC<BookingInquiryProps> = ({ selectedRoomPref
     checkOutDate: '',
     adults: '2',
     children: '0',
-    roomPreference: selectedRoomPreference || 'Heritage Executive Room',
+    roomPreference: selectedRoomPreference || 'Heritage Executive AC Room',
     additionalMessage: '',
   });
 
@@ -346,9 +346,9 @@ Thank you.`;
                     onChange={(e) => setFormData({ ...formData, roomPreference: e.target.value })}
                     className="w-full px-3 py-2 text-sm border border-stone-300 rounded bg-stone-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#173C32]/20"
                   >
-                    <option value="Heritage Executive Room">Heritage Executive Room</option>
-                    <option value="Grand Family Suite">Grand Family Suite</option>
-                    <option value="Deluxe Comfort AC Room">Deluxe Comfort AC Room</option>
+                    <option value="Heritage Executive AC Room">Heritage Executive AC Room</option>
+                    <option value="Deluxe Suite with Gir Lion Art">Deluxe Suite with Gir Lion Art</option>
+                    <option value="Comfort AC Room with Entertainment Console">Comfort AC Room with Entertainment Console</option>
                     <option value="Any Available AC Room">Any Available AC Room</option>
                   </select>
                 </div>

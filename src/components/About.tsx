@@ -27,7 +27,7 @@ export const About: React.FC<AboutProps> = ({ onViewRoomsClick }) => {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-sm overflow-hidden shadow-xl border-4 border-white bg-stone-100 group">
               <img
-                src="/src/assets/images/hotel_reception_hall_1791886020058.jpg"
+                src="/src/assets/images/real_reception_grand_heritage_1791887504546.jpg"
                 alt="Reception & Front Desk at Hotel The Grand Heritage Junagadh"
                 className="w-full h-[380px] sm:h-[460px] object-cover object-center group-hover:scale-102 transition-transform duration-700"
                 referrerPolicy="no-referrer"
@@ -94,7 +94,7 @@ export const About: React.FC<AboutProps> = ({ onViewRoomsClick }) => {
                   <Compass className="w-4 h-4 text-[#B89A62] shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs uppercase text-stone-500 font-medium block">Guest Rating</span>
-                    <span className="font-medium text-stone-800">4.9 / 5 (144 Google Reviews)</span>
+                    <span className="font-medium text-stone-800">4.9 / 5 Star Rating</span>
                   </div>
                 </div>
               </div>

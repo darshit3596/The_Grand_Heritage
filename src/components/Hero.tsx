@@ -17,8 +17,8 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onEnquireClick }) =>
       {/* Background Image with Measured Contrast Scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hero_hotel_junagadh_1791886018636.jpg"
-          alt="Hotel The Grand Heritage Junagadh Grand Interior"
+          src="/src/assets/images/real_hero_grand_heritage_entrance_1791887624015.jpg"
+          alt="Hotel The Grand Heritage Junagadh Grand Entrance"
           className="w-full h-full object-cover object-center scale-105 motion-safe:animate-in motion-safe:fade-in duration-1000"
           referrerPolicy="no-referrer"
         />
@@ -30,18 +30,37 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onEnquireClick }) =>
       {/* Content Container */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 text-white">
         <div className="max-w-3xl space-y-6">
-          {/* Trust Marker & Location */}
-          <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm tracking-widest uppercase font-semibold text-[#B89A62]">
-            <span className="flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-3 py-1 rounded border border-[#B89A62]/30 text-[#F8F5EF]">
-              <MapPin className="w-3.5 h-3.5 text-[#B89A62]" />
-              Junagadh, Gujarat, India
-            </span>
-            <span className="hidden sm:inline text-white/40">·</span>
-            <span className="flex items-center gap-1 text-amber-300 bg-black/40 backdrop-blur-md px-3 py-1 rounded border border-white/10">
-              <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-              <span>{hotelConfig.rating} / 5</span>
-              <span className="text-white/70">({hotelConfig.reviewCount} Reviews)</span>
-            </span>
+          {/* Official Branding Logo Badge & Trust Marker */}
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="flex items-center gap-3 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded border border-[#B89A62]/40 shadow-sm">
+              <div className="w-9 h-9 rounded bg-black border border-[#B89A62]/60 p-0.5 shrink-0 overflow-hidden">
+                <img
+                  src={hotelConfig.logoUrl}
+                  alt="Hotel The Grand Heritage Junagadh Official Logo"
+                  className="w-full h-full object-contain"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-serif text-sm font-semibold tracking-wider text-[#F8F5EF] uppercase leading-tight">
+                  The Grand Heritage
+                </span>
+                <span className="text-[9px] tracking-widest text-[#B89A62] uppercase font-semibold">
+                  A Legacy of Hospitality
+                </span>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm tracking-widest uppercase font-semibold text-[#B89A62]">
+              <span className="flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded border border-[#B89A62]/30 text-[#F8F5EF]">
+                <MapPin className="w-3.5 h-3.5 text-[#B89A62]" />
+                Junagadh, Gujarat
+              </span>
+              <span className="flex items-center gap-1 text-amber-300 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded border border-white/10">
+                <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                <span>{hotelConfig.rating} / 5 Rating</span>
+              </span>
+            </div>
           </div>
 
           {/* Main Headline */}

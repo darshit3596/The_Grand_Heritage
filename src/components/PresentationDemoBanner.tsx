@@ -90,7 +90,7 @@ export const PresentationDemoBanner: React.FC<PresentationDemoBannerProps> = ({
                   </div>
                   <div className="flex items-center gap-1.5 text-stone-700">
                     <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    <span><strong>Google Maps Rating:</strong> 4.9/5 (144 reviews)</span>
+                    <span><strong>Google Maps Rating:</strong> 4.9 / 5 Star Rating</span>
                   </div>
                   <div className="flex items-center gap-1.5 text-stone-700">
                     <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0" />

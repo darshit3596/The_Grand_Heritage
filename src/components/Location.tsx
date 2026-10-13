@@ -150,7 +150,7 @@ export const Location: React.FC = () => {
             {/* Bottom info strip */}
             <div className="bg-[#173C32] text-[#F8F5EF] p-4 text-xs flex flex-wrap items-center justify-between gap-2">
               <span className="text-stone-300">
-                Official Google Maps Rating: <strong className="text-amber-300 font-medium">★ 4.9</strong> (144 reviews)
+                Official Google Maps Rating: <strong className="text-amber-300 font-medium">★ 4.9 / 5</strong>
               </span>
               <span className="text-[11px] text-stone-400">
                 GST: {hotelConfig.gstNumber}

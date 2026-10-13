@@ -4,14 +4,14 @@ import { hotelConfig } from '../data/hotelConfig';
 
 export const AnnouncementBar: React.FC = () => {
   return (
-    <div className="bg-[#173C32] text-[#F8F5EF] text-xs py-2 px-4 border-b border-[#B89A62]/30">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-        <div className="flex items-center gap-2 tracking-wide font-medium text-center sm:text-left">
-          <span className="text-[#B89A62]">✦</span>
-          <span>Welcome to Hotel The Grand Heritage, Junagadh · AC Luxurious Rooms</span>
+    <div className="bg-[#173C32] text-[#F8F5EF] text-[11px] sm:text-xs py-1.5 sm:py-2 px-3 sm:px-4 border-b border-[#B89A62]/30">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
+        <div className="flex items-center gap-1.5 tracking-wide font-medium truncate min-w-0">
+          <span className="text-[#B89A62] text-[10px] shrink-0">✦</span>
+          <span className="truncate">Hotel The Grand Heritage, Junagadh · AC Luxurious Rooms</span>
         </div>
 
-        <div className="flex items-center gap-4 text-stone-200">
+        <div className="flex items-center gap-3 text-stone-200 shrink-0">
           <div className="hidden md:flex items-center gap-1.5 text-stone-300">
             <Clock className="w-3.5 h-3.5 text-[#B89A62]" />
             <span>Check-in: {hotelConfig.checkIn} · Check-out: {hotelConfig.checkOut}</span>
@@ -19,11 +19,11 @@ export const AnnouncementBar: React.FC = () => {
           
           <a
             href={`tel:+${hotelConfig.phone}`}
-            className="flex items-center gap-1 hover:text-[#B89A62] transition-colors"
+            className="flex items-center gap-1 hover:text-[#B89A62] transition-colors font-semibold text-[11px] sm:text-xs"
             title="Call hotel reception"
           >
-            <Phone className="w-3.5 h-3.5 text-[#B89A62]" />
-            <span className="font-semibold">{hotelConfig.formattedPhone}</span>
+            <Phone className="w-3 h-3 text-[#B89A62]" />
+            <span>{hotelConfig.formattedPhone}</span>
           </a>
 
           <a

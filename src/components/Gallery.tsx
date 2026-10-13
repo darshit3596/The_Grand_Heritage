@@ -8,7 +8,7 @@ export const Gallery: React.FC = () => {
   const [lightboxOpen, setLightboxOpen] = useState<boolean>(false);
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
-  const categories = ['All', 'Reception', 'Rooms', 'Bathrooms', 'Lobby'];
+  const categories = ['All', 'Reception', 'Entrance', 'Rooms', 'Bathrooms', 'Lobby'];
 
   const filteredItems = selectedCategory === 'All'
     ? hotelConfig.gallery

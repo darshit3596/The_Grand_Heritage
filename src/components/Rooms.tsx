@@ -31,11 +31,11 @@ export const Rooms: React.FC<RoomsProps> = ({ onSelectRoomForInquiry }) => {
           </p>
         </div>
 
-        {/* Demo Content Disclosure Note (Clear, professional presentation requirement) */}
-        <div className="mb-10 max-w-3xl mx-auto bg-stone-50 border border-stone-200 rounded p-4 flex items-start gap-3 text-stone-600 text-xs sm:text-sm">
+        {/* Real Property Photography Notice */}
+        <div className="mb-10 max-w-3xl mx-auto bg-[#173C32]/5 border border-[#173C32]/15 rounded p-4 flex items-start gap-3 text-stone-700 text-xs sm:text-sm">
           <AlertCircle className="w-5 h-5 text-[#B89A62] shrink-0 mt-0.5" />
           <div>
-            <span className="font-semibold text-stone-800">Presentation Demo Notice:</span> The room categories and configurations shown below are sample demo layouts. Exact category names, tariffs, and bed configurations can be customized to the hotel's operational inventory. Please contact management directly on WhatsApp for real-time rates.
+            <span className="font-semibold text-[#173C32]">Verified Hotel Photographs:</span> The room options and amenities featured below represent actual on-site photographs of Hotel The Grand Heritage Junagadh. For current seasonal tariffs, group booking packages, and exact availability, please contact our front desk on WhatsApp.
           </div>
         </div>
 
